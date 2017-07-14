@@ -1,0 +1,113 @@
+// ******* color variables *******
+$titleMain: #fff;
+$titleSub: #696969;
+$text: #7f7f7f;
+$highlight: #1E90FF;
+
+// ******* Mobile Friendly *******
+body {
+     color: $text;
+}
+
+#header {
+    background: url('./img/header.jpg');
+    background-size:cover;
+    height: 450px;
+}
+
+#welcome {
+    padding-top: 10.0rem;
+    color: $titleMain;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5); 
+}
+
+h2 {
+    color: $titleSub;
+}
+
+ul {
+    padding: 0 0 0 20px;
+    list-style-type: none;
+}
+
+p, li {
+    font-size: 1.3rem;
+}
+
+li::before {
+    content: "\e800";
+    font-family: 'fontello';
+    color: $highlight;
+    position: absolute;
+    margin: 0 2px 0 -20px;
+}
+
+#important,
+#whoami {
+     padding-top: 2.0rem;
+}
+
+#whoami  img {
+    float:right;
+    margin: 2px;
+}
+
+#location iframe {
+    width:100%;
+    border:0;
+    height:400px;
+}
+
+hr { 
+    background-color: $highlight;
+    height: 1px;
+    border: 0; 
+}
+
+/* Larger than mobile screen */
+@media (min-width: 40.0rem) { 
+     #contactdetails {
+        width: 450px;
+    }
+ }
+
+/* Larger than tablet screen */
+@media (min-width: 80.0rem) { 
+    #header {
+        height: 500px;
+    }
+    #location iframe {
+        height:500px;
+    }
+}
+
+/* Larger than desktop screen */
+@media (min-width: 120.0rem) {
+    #header {
+        height: 600px;
+    }
+    #location iframe {
+        height:600px;
+    }
+}
+
+// ******* links *******
+a {
+    color: $highlight;
+}
+
+a:hover {
+    color: $text;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active  {
+    text-decoration: none;
+}
+
+// ******* typography *******
+.text-center {
+    text-align: center;
+}

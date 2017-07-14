@@ -1,0 +1,32 @@
+{
+  "name": "heidi-baettig-ch",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "prebuild": "del-cli dist -f",
+    "build:dev": "webpack --progress --watch",
+    "build:prod": "webpack -p --progress",
+    "server": "webpack-dev-server --content-base dist/",
+    "start": "npm run server -s && npm run build:dev -s"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "milligram": "^1.3.0",
+    "normalize.css": "^7.0.0"
+  },
+  "devDependencies": {
+    "css-loader": "^0.28.4",
+    "del-cli": "^1.1.0",
+    "file-loader": "^0.11.2",
+    "html-webpack-inline-source-plugin": "0.0.9",
+    "html-webpack-plugin": "^2.29.0",
+    "node-sass": "^4.5.3",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.18.2",
+    "webpack": "^3.1.0",
+    "webpack-dev-server": "^2.5.1"
+  }
+}
