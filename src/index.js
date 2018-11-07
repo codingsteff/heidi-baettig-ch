@@ -7,3 +7,10 @@ require("file-loader?name=web.config!./web.config");
 
 document.getElementById('profile').src = require('./img/profile.png');
 document.getElementById("year").innerHTML = (new Date()).getFullYear();
+
+function showMoreWhoAmi() {
+    document.getElementById('whoami-more-button').style.visibility = 'hidden';
+    document.getElementById('whoami-more').style.visibility = 'visible';
+}
+
+document.getElementById('whoami-more-button').addEventListener('click', showMoreWhoAmi);
