@@ -1,15 +1,10 @@
-var path = require('path');
-var HtmlwebpackPlugin = require('html-webpack-plugin');
-var HtmlWebpackInlineSourcePlugin = require('html-webpack-inline-source-plugin');
+const HtmlwebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackInlineSourcePlugin = require('html-webpack-inline-source-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+
 module.exports = {
-    entry: './src/index.js',
-    output: {
-        filename: 'bundle.js',
-        path: path.resolve(__dirname, 'dist')
-    },
     module: {
-        rules: [
-            {
+        rules: [{
                 test: /\.scss$/,
                 use: [{
                     loader: "style-loader" // creates style nodes from JS strings
@@ -41,9 +36,11 @@ module.exports = {
         ]
     },
     plugins: [
+        new CleanWebpackPlugin(['dist']),
         new HtmlwebpackPlugin({
             template: 'src/index.html',
-            inlineSource: '.(js|css)$', // embed all javascript and css inline
+            favicon: 'src/favicon.ico',
+            inlineSource: '.(js|css)$', // embed all javascript and css inline needs inline-source-plugin
             minify: {
                 collapseWhitespace: true
             }

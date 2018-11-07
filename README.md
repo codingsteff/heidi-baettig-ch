@@ -4,12 +4,12 @@
 - Iconfont [Fontello](http://fontello.com/) (use [fontello.config.json](fontello.config.json))
 
 # Dev 
-- `npm i`
+- `npm ci`
 - `npm start`
 - [localhost:8080](http://localhost:8080)
 
 # Publish
-- `npm run build:prod`
+- `npm run build`
 - Copy content of folder `\dist` to webserver
 
 # Important
