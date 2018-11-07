@@ -1,24 +1,31 @@
-// ******* color variables *******
+// ******* colors *******
 $titleMain: #fff;
 $titleSub: #696969;
 $text: #7f7f7f;
 $highlight: #1E90FF;
 
-// ******* Mobile Friendly *******
 body {
-     color: $text;
+    color: $text;
+}
+
+// ******* Mobile First *******
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 #header {
     background: url('./img/header.jpg');
-    background-size:cover;
+    background-size: cover;
     height: 450px;
 }
 
 #welcome {
     padding-top: 10.0rem;
     color: $titleMain;
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5); 
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
 
 h2 {
@@ -30,7 +37,8 @@ ul {
     list-style-type: none;
 }
 
-p, li {
+p,
+li {
     font-size: 1.3rem;
 }
 
@@ -44,50 +52,64 @@ li::before {
 
 #important,
 #whoami {
-     padding-top: 2.0rem;
+    padding-top: 2.0rem;
 }
 
-#whoami  img {
-    float:right;
+#whoami img {
+    float: right;
     margin: 2px;
 }
 
 #location iframe {
-    width:100%;
-    border:0;
-    height:400px;
+    width: 100%;
+    border: 0;
+    height: 400px;
 }
 
-hr { 
+hr {
     background-color: $highlight;
     height: 1px;
-    border: 0; 
+    border: 0;
 }
 
 /* Larger than mobile screen */
-@media (min-width: 40.0rem) { 
-     #contactdetails {
+@media (min-width: 40.0rem) {
+    .container {
+        width: 750px;
+    }
+
+    #contactdetails {
         width: 450px;
     }
- }
+}
 
 /* Larger than tablet screen */
-@media (min-width: 80.0rem) { 
+@media (min-width: 80.0rem) {
+    .container {
+        width: 970px;
+    }
+
     #header {
         height: 500px;
     }
+
     #location iframe {
-        height:500px;
+        height: 500px;
     }
 }
 
 /* Larger than desktop screen */
 @media (min-width: 120.0rem) {
+    .container {
+        width: 1170px;
+    }
+
     #header {
         height: 600px;
     }
+
     #location iframe {
-        height:600px;
+        height: 600px;
     }
 }
 
@@ -103,7 +125,7 @@ a:hover {
 a:link,
 a:visited,
 a:hover,
-a:active  {
+a:active {
     text-decoration: none;
 }
 
