@@ -1,1 +1,1 @@
-console.log('secrets');
+console.log('secret user', process.env.FTP_USER);
