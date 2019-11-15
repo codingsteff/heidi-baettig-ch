@@ -17,8 +17,6 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-      env:
-        FTP_USER: ${{ secrets.FTP_USER }}
     - name: npm install, build, and deploy
       run: |
         npm ci
@@ -26,3 +24,4 @@ jobs:
         npm run deploy
       env:
         CI: true
+        FTP_USER: ${{ secrets.FTP_USER }}
