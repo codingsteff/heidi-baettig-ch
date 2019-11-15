@@ -1,6 +1,8 @@
 const HtmlwebpackPlugin = require('html-webpack-plugin');
 const HtmlWebpackInlineSourcePlugin = require('html-webpack-inline-source-plugin');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
+const {
+  CleanWebpackPlugin
+} = require('clean-webpack-plugin');
 
 module.exports = {
   module: {
@@ -36,7 +38,7 @@ module.exports = {
     ]
   },
   plugins: [
-    new CleanWebpackPlugin(['dist']),
+    new CleanWebpackPlugin(),
     new HtmlwebpackPlugin({
       template: 'src/index.html',
       favicon: 'src/favicon.ico',
