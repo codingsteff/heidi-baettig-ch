@@ -12,7 +12,13 @@
 - `npm start`
 - [localhost:8080](http://localhost:8080)
 
-## Publish
+## Deployment
+
+### Continuous Deployment
+
+- push to github
+
+### Manual Deployment
 
 - `npm run build`
 - Copy content of folder `\dist` to webserver
