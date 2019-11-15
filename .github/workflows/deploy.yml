@@ -25,3 +25,5 @@ jobs:
       env:
         CI: true
         FTP_USER: ${{ secrets.FTP_USER }}
+        FTP_PW: ${{ secrets.FTP_PW }}
+        FTP_HOST: ${{ secrets.FTP_HOST }}
