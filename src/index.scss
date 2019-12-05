@@ -40,7 +40,7 @@ ul {
 a,
 p,
 li {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
 }
 
 li::before {
@@ -53,16 +53,16 @@ li::before {
 
 #important,
 #whoami {
-    padding-top: 2.0rem;
+    padding-top: 1.0rem;
 }
 
 #whoami-more {
-    visibility: hidden;
+    display: none;
 }
 
-#whoami img {
-    float: right;
-    margin: 2px;
+#profile {
+    float: left;
+    margin-right: 1rem;
 }
 
 #location iframe {
@@ -75,6 +75,7 @@ hr {
     background-color: $highlight;
     height: 1px;
     border: 0;
+    clear: both;
 }
 
 /* Larger than mobile screen */
@@ -96,6 +97,10 @@ hr {
 
     #header {
         height: 500px;
+    }
+
+    #profile {
+        margin-bottom: 3rem;
     }
 
     #location iframe {
