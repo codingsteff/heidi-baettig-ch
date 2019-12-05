@@ -2,7 +2,7 @@ import '../node_modules/normalize.css/normalize.css';
 import '../node_modules/milligram/dist/milligram.css';
 import './fontello.css';
 import './index.scss';
-// Kopien für /dist
+// Copies to /dist
 require("file-loader?name=web.config!./web.config");
 
 import imgProfle from './img/profile.png';
@@ -16,3 +16,15 @@ function showMoreWhoAmi() {
 }
 
 document.getElementById('whoami-more-button').addEventListener('click', showMoreWhoAmi);
+
+// Siema Carousel
+import Siema from 'siema';
+const carousel = new Siema({
+    duration: 500,
+    onInit: () => setInterval(() => {
+        carousel.next();
+    }, 5000),
+    loop: true,
+});
+document.querySelector('.carousel-prev').addEventListener('click', () => carousel.prev());
+document.querySelector('.carousel-next').addEventListener('click', () => carousel.next());

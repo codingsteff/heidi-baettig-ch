@@ -32,23 +32,42 @@ h2 {
     color: $titleSub;
 }
 
-ul {
-    padding: 0 0 0 20px;
-    list-style-type: none;
-}
-
 a,
 p,
 li {
     font-size: 1.5rem;
 }
 
-li::before {
-    content: "\e800";
-    font-family: 'fontello';
-    color: $highlight;
-    position: absolute;
-    margin: 0 2px 0 -20px;
+ul.siema {
+    padding: 0;
+    list-style-type: none;
+    background-color: $highlight;
+    color: white;
+    box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .2), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12);
+    margin: 0.25rem 0;
+
+    li {
+        margin: 0.5rem;
+        text-align: center;
+    }
+}
+
+.dots {
+    display: flex;
+    justify-content: center;
+
+    .dot {
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+
+        border-radius: 50%;
+
+        height: 10px;
+        width: 10px;
+        margin: 0.25rem;
+        background-color: $highlight;
+    }
 }
 
 #important,
