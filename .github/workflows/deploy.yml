@@ -24,7 +24,7 @@ jobs:
     - name: dockerize
       run: |
         docker build -t ghcr.io/codingsteff/heidi-baettig-www .
-        echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u codingsteff --password-stdin
+        echo "${{ secrets.GH_PAT }}" | docker login ghcr.io -u codingsteff --password-stdin
         docker push ghcr.io/codingsteff/heidi-baettig-www
       env:
         CI: true
