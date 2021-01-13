@@ -17,13 +17,14 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - name: npm install, build, and deploy
+    - name: npm install and build
       run: |
         npm ci
         npm run build --if-present
-        npm run deploy
+    - name: dockerize
+      run: |
+        docker build -t ghcr.io/codingsteff/heidi-baettig-www .
+        echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u codingsteff --password-stdin
+        docker push ghcr.io/codingsteff/heidi-baettig-www
       env:
         CI: true
-        FTP_USER: ${{ secrets.FTP_USER }}
-        FTP_PW: ${{ secrets.FTP_PW }}
-        FTP_HOST: ${{ secrets.FTP_HOST }}
