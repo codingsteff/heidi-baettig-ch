@@ -8,20 +8,24 @@
 
 ## Dev
 
-- `npm ci`
-- `npm start`
-- [localhost:8080](http://localhost:8080)
+```bash
+npm ci
+npm start
+# open http://localhost:8080
+```
 
 ## Deployment
 
 ### Continuous Deployment
 
-- push to github
+- Push to Github => Github Action => Github Container Registry
 
-### Manual Deployment
+## Integration
 
-- `npm run build`
-- Copy content of folder `\dist` to webserver
+```bash
+docker run -p 8080:80 ghcr.io/codingsteff/heidi-baettig-www
+# open http://localhost:8080
+```
 
 ## QA
 
