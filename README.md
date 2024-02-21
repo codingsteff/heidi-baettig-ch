@@ -30,3 +30,9 @@ docker run -p 8080:80 ghcr.io/codingsteff/heidi-baettig-www
 ## QA
 
 - [PageSpeed](https://developers.google.com/speed/pagespeed/insights/?url=http%3A%2F%2Fheidi-baettig.ch)
+
+## DNS
+
+- [heidi-baettig.ch](https://heidi-baettig.ch) by beat/exios? dns by hosteurope 
+- [heidi-bättig.ch](https://xn--heidi-bttig-r8a.ch) by hostpoint.ch
+- [bättig-beratungen.ch](https://xn--bttig-beratungen-vnb.ch) by hostpoint.ch
